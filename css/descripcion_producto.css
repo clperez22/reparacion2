@@ -1,6 +1,7 @@
 
 .titulo_herramientas{
     display: block;
+    user-select: none;
 }
 .descripcion_del_producto{
  
@@ -8,6 +9,7 @@
     margin: auto;
     font-size: 1.5rem;
     border-radius: 2rem;
+    user-select: none;
   
  
     margin-left: 35rem;
@@ -17,6 +19,7 @@
     font-size: 2rem;
     margin-left: 7rem;
     margin-bottom: 2rem;
+    user-select: none;
 }
 .imagentutut{
     width: 25rem;
@@ -35,6 +38,7 @@
 
     margin-left: 35rem;
     font-size: 1.2rem;
+    user-select: none;
 }
 .pasos_del_producto{
     margin-top: 12rem;
@@ -42,4 +46,5 @@
 
     margin-left: 5rem;
     font-size: 1.2rem;
+    user-select: none;
 }

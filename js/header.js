@@ -1,4 +1,4 @@
-let header_DOM = document.querySelector("header")
+let header_DOM = document.querySelector("#header");
 
 let header_componente = `
     

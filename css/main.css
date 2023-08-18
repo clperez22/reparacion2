@@ -51,13 +51,21 @@
 .ocultar{
     display: none; /*ocultar*/
 }
-.boton-hazlo{
+
+/* Estilos para el botón "Hazlo" */
+.boton-hazlo {
+  
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     border: 1px solid black;
     background-color: rgb(255, 247, 130);
-   margin-left: 2rem;
-   padding: 0.5rem;
-   border-radius: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-top:5em;
+    margin-left: -15rem;
 }
+
 .boton-cerrar{
    
     margin-left: 40rem;

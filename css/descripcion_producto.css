@@ -1,50 +1,71 @@
-
-.titulo_herramientas{
+.itemvf.mostrar {
+    padding: 2rem;
+    width: 80%;
+    margin-left: 2rem;
+    border: 0.5rem solid rgb(148, 147, 147);
+    border-radius: 1rem;
+    background-color: aqua;
+    height: auto;
+}
+.titulo_herramientas {
     display: block;
     user-select: none;
 }
-.descripcion_del_producto{
- 
-    width: auto;
-    margin: auto;
+
+.descripcion_del_producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 1.5rem;
     border-radius: 2rem;
     user-select: none;
-  
- 
-    margin-left: 35rem;
-    margin-top: -12rem;
+    width: 40rem;
+    margin: auto;
+    margin-top: -15rem;
+
 }
-.nombre_del_producto{
+
+.nombre_del_producto {
+   margin-top: 5rem;
+  
     font-size: 2rem;
-    margin-left: 7rem;
+    text-align: center; /* Alineación de texto centrada */
     margin-bottom: 2rem;
     user-select: none;
 }
-.imagentutut{
-    width: 25rem;
-    height: 5rem;
-    margin-bottom: 8rem;
+
+.imagen_del_producto {
+    display: none;
+    width: 20rem;
+    height: 20rem;
+    object-fit: contain; /* Opcional: ajusta el comportamiento de ajuste de imagen */
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+  
 }
-.imagen_del_producto{
-    width: 25rem;
-    margin-left: 5rem;
-    
-}
 
-.herramientas_del_producto{
-
-    margin-top: 5rem;
-
-    margin-left: 35rem;
+.herramientas_del_producto {
+    margin-top: 2rem; /* Ajuste de margen superior */
+    text-align: center; /* Alineación de texto centrada */
     font-size: 1.2rem;
     user-select: none;
 }
-.pasos_del_producto{
-    margin-top: 12rem;
 
-
-    margin-left: 5rem;
+.pasos_del_producto {
+    margin-top: 2rem; /* Ajuste de margen superior */
+    text-align: center; /* Alineación de texto centrada */
     font-size: 1.2rem;
     user-select: none;
+}
+.boton-video {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(255, 247, 130);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: black;
+    font-weight: bold;
 }

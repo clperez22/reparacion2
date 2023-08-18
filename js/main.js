@@ -29,28 +29,13 @@ function mostrarPasos(titulo, imagen, descripcion, herramientas, pasos) {
     let imagenProductoDOM = cajaItemDOM.querySelector(".imagen_del_producto");
     let nombreProductoDOM = cajaItemDOM.querySelector(".nombre_del_producto");
    
-    
+
 
     nombreProductoDOM.textContent = titulo;
     imagenProductoDOM.src = imagen;
     cajaDescripcionDOM.textContent = descripcion;
 
    
-   
-
-    // Agregamos el botón de cierre solo si no se ha agregado previamente
-    let botonCerrar = cajaItemDOM.querySelector(".boton-cerrar");
-    if (!botonCerrar) {
-        botonCerrar = document.createElement("button");
-        botonCerrar.textContent = "Cerrar";
-        botonCerrar.classList.add("boton-cerrar");
-        botonCerrar.addEventListener("click", () => {
-            cajaItemDOM.classList.remove("mostrar");
-            main.classList.remove("ocultar");
-        });
-        cajaItemDOM.appendChild(botonCerrar);
-    }
-
     cajaItemDOM.classList.add("mostrar");
     main.classList.add("ocultar");
 }
@@ -61,11 +46,18 @@ productos.forEach((cadaElemento, index) => {
         let descripcion = data[index].descripcion;
         let herramientas = data[index].herramientas;
         let pasos = data[index].pasos;
-        let precio = data[index].precio; // Agregamos esta línea para obtener el precio
+        let precio = data[index].precio;
+        let video = data[index].video; // Obtén el enlace al video
 
+        // Mostrar la información del producto al hacer clic
         mostrarPasos(titulo, imagen, descripcion, herramientas, pasos);
 
         let cajaDescripcionDOM = cajaItemDOM.querySelector(".descripcion_del_producto");
+        let imagenProductoDOM = cajaItemDOM.querySelector(".imagen_del_producto");
+
+        // Establecer la imagen y mostrarla al hacer clic
+        imagenProductoDOM.src = imagen;
+        imagenProductoDOM.style.display = "block"; // Mostrar la imagen
 
         if (data[index].Estado) {
             let botonHazlo = document.createElement("button");
@@ -84,6 +76,14 @@ productos.forEach((cadaElemento, index) => {
                 `;
                 cajaDescripcionDOM.appendChild(herramientasPasosDOM);
                 botonHazlo.style.display = "none"; // Ocultar el botón "Hazlo tu mismo"
+
+                // Agregar botón de video
+                let botonVideo = document.createElement("a");
+                botonVideo.textContent = "Ver tutorial";
+                botonVideo.classList.add("boton-video");
+                botonVideo.href = video;
+                botonVideo.target = "_blank"; // Abrir enlace en una nueva pestaña
+                cajaDescripcionDOM.appendChild(botonVideo);
             });
 
             cajaDescripcionDOM.appendChild(botonHazlo);
